@@ -1,7 +1,7 @@
 ---
 date: '2015-12-21'
 title: 'IT Technical Support'
-company: 'NgKhai Development Corporation'
+company: 'NgKhai'
 range: '2016 - 2016'
 url: '#'
 location: '&nbsp;'
