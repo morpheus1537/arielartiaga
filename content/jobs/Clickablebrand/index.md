@@ -1,7 +1,7 @@
 ---
 date: '2016-12-21'
 title: 'Web Researcher - Lead Generation'
-company: 'Clickablebrand '
+company: 'ClickableBrand '
 range: '2016 - 2018'
 url: ''
 location: '&nbsp;'

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
@@ -22,6 +23,10 @@ const StyledProjectsSection = styled.section`
     &:after {
       bottom: 0.1em;
     }
+  }
+
+  ul.projects-grid li .project-inner {
+    overflow: hidden;
   }
 
   .projects-grid {
@@ -76,9 +81,12 @@ const StyledProject = styled.li`
     overflow: auto;
   }
 
+  .projects-grid li div.project-inner {
+    overflow: hidden;
+  }
+
   .project-top {
     ${({ theme }) => theme.mixins.flexBetween};
-    margin-bottom: 35px;
 
     .folder {
       color: var(--green);
@@ -99,6 +107,7 @@ const StyledProject = styled.li`
         padding: 5px 7px;
 
         &.external {
+          ${({ theme }) => theme.mixins.smallButton};
           svg {
             width: 22px;
             height: 22px;
@@ -115,7 +124,7 @@ const StyledProject = styled.li`
   }
 
   .project-title {
-    margin: 0 0 10px;
+    margin: 20px 0 10px;
     color: var(--lightest-slate);
     font-size: var(--fz-xxl);
 
@@ -135,7 +144,85 @@ const StyledProject = styled.li`
     }
   }
 
+  .gatsby-image-wrapper-constrained {
+    display: inline-block;
+    height: 250px;
+  }
+
+  ul.projects-grid li .project-inner {
+    overflow: hidden;
+  }
+
+  .gatsby-image-wrapper img {
+    height: auto;
+  }
+
+  .project-image {
+    ${({ theme }) => theme.mixins.boxShadow};
+    grid-column: 6 / -1;
+    grid-row: 1 / -1;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: 768px) {
+      grid-column: 1 / -1;
+      height: 250px;
+      opacity: 1;
+    }
+
+    a {
+      width: 100%;
+      height: 100%;
+      background-color: var(--green);
+      border-radius: var(--border-radius);
+      vertical-align: middle;
+
+      &:hover,
+      &:focus {
+        background: transparent;
+        outline: 0;
+
+        &:before,
+        .img {
+          background: transparent;
+          filter: none;
+        }
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        transition: var(--transition);
+        background-color: var(--navy);
+        mix-blend-mode: screen;
+      }
+    }
+
+    .img {
+      border-radius: var(--border-radius);
+      mix-blend-mode: multiply;
+      filter: grayscale(100%) contrast(1) brightness(90%);
+
+      @media (max-width: 768px) {
+        object-fit: cover;
+        width: auto;
+        height: 100%;
+        filter: grayscale(100%) contrast(1) brightness(50%);
+      }
+    }
+  }
+
   .project-description {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
     color: var(--light-slate);
     font-size: 17px;
 
@@ -178,6 +265,11 @@ const Projects = () => {
         edges {
           node {
             frontmatter {
+              cover {
+                childImageSharp {
+                  gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+                }
+              }
               title
               tech
               github
@@ -213,36 +305,19 @@ const Projects = () => {
 
   const projectInner = node => {
     const { frontmatter, html } = node;
-    const { github, external, title, tech } = frontmatter;
+    const { github, external, title, cover, tech } = frontmatter;
+    const image = getImage(cover);
 
     return (
       <div className="project-inner">
         <header>
-          <div className="project-top">
-            <div className="folder">
-              <Icon name="Folder" />
-            </div>
-            <div className="project-links">
-              {github && (
-                <a href={github} aria-label="GitHub Link" target="_blank" rel="noreferrer">
-                  <Icon name="GitHub" />
-                </a>
-              )}
-              {external && (
-                <a
-                  href={external}
-                  aria-label="External Link"
-                  className="external"
-                  target="_blank"
-                  rel="noreferrer">
-                  <Icon name="External" />
-                </a>
-              )}
-            </div>
+          <div className="project-image">
+            <a href={external ? external : github ? github : '#'}>
+              <GatsbyImage image={image} alt={title} className="img" />
+            </a>
           </div>
-
           <h3 className="project-title">
-            <a href={external} target="_blank" rel="noreferrer">
+            <a href={external} target="_blank" rel="noreferrer" className="external">
               {title}
             </a>
           </h3>
@@ -250,11 +325,27 @@ const Projects = () => {
           <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
         </header>
 
+        <div className="project-top">
+          <div className="project-links">
+            {external && (
+              <a
+                href={external}
+                aria-label="External Link"
+                className="external"
+                target="_blank"
+                rel="noreferrer">
+                <Icon name="External" /> &nbsp; Visit
+              </a>
+            )}
+          </div>
+        </div>
         <footer>
           {tech && (
             <ul className="project-tech-list">
               {tech.map((tech, i) => (
-                <li key={i}>{tech}</li>
+                <li key={i}>
+                  Built with <b>{tech}</b>
+                </li>
               ))}
             </ul>
           )}
@@ -266,11 +357,9 @@ const Projects = () => {
   return (
     <StyledProjectsSection>
       <h2 ref={revealTitle}>Other Projects I Worked</h2>
-
-      <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
-        view the archive
+      <Link className="inline-link archive-link" ref={revealArchiveLink}>
+        Portfolio
       </Link>
-
       <ul className="projects-grid">
         {prefersReducedMotion ? (
           <>

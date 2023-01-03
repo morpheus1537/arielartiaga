@@ -64,7 +64,10 @@ const Hero = () => {
   const three = <h3 className="big-heading">I build and design websites.</h3>;
   const four = (
     <>
-      <p>I’m a developer with a full-stack background and a keen eye for good design.</p>
+      <p>
+        I’m a developer with a full-stack background who enjoys creating professional, beautiful,
+        and customer-focused websites.
+      </p>
     </>
   );
   const five = (

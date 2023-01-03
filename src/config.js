@@ -3,24 +3,24 @@ module.exports = {
 
   socialMedia: [
     {
-      name: 'GitHub',
-      url: 'https://github.com/bchiang7',
+      name: 'Linkedin',
+      url: 'https://www.linkedin.com/in/ariel-artiaga',
+    },
+    {
+      name: 'Facebook',
+      url: 'https://www.facebook.com/ariel.artiaga.3',
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/bchiang7',
+      url: 'https://www.instagram.com/ariel.l.artiaga/',
     },
     {
       name: 'Twitter',
-      url: 'https://twitter.com/bchiang7',
-    },
-    {
-      name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/bchiang7',
+      url: 'https://twitter.com/arielartiaga95',
     },
     {
       name: 'Codepen',
-      url: 'https://codepen.io/bchiang7',
+      url: 'https://codepen.io/ariel2021537',
     },
   ],
 
@@ -34,7 +34,7 @@ module.exports = {
       url: '/#jobs',
     },
     {
-      name: 'Work',
+      name: 'Portfolio',
       url: '/#projects',
     },
     {

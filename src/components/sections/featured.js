@@ -384,7 +384,7 @@ const Featured = () => {
                     <div className="project-links">
                       {cta && (
                         <a href={cta} aria-label="Course Link" className="cta">
-                          Visit
+                          <Icon name="External" /> &nbsp; Visit
                         </a>
                       )}
                       {github && (

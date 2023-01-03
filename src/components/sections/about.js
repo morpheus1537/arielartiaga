@@ -148,16 +148,16 @@ const About = () => {
             <h3>I build and design websites.</h3>
             <p>
               Hello! My name is Ariel Artiaga. I’m a developer with a keen eye for good design and
-              developing a website. I love to make complex things simple and joy to use. I have
-              solid experience for almost 4 years in the field. I can handle both front-end and
+              developing a website. I love to make complex things simple and easy to use. I have
+              solid experience from 4+ years in the field. I can handle both the front-end and
               back-end development of a website. I also have a serious passion for UI effects,
-              animations and creating intuitive, dynamic user experiences.
+              animations, and creating intuitive, dynamic user experiences on websites.
             </p>
 
             <p>
               I’m a fast learner, able to pick up new skills and juggle different projects and roles
-              with relative ease. Well-organised person, problem solver, independent employee with
-              high attention to detail.
+              with relative ease. I am a well-organized person, a problem solver, and an independent
+              employee with high attention to detail.
             </p>
           </div>
 

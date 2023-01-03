@@ -106,8 +106,7 @@ const Footer = () => {
 
       <StyledCredit tabindex="-1">
         <a href="mailto:ariel.artiaga.3@gmail.com">
-          <div>2022 © Ariel Artiaga</div>
-          <div>Programming isn't about what you know, it's about what you can figure out.</div>
+          <div>2023 © Ariel Artiaga</div>
 
           {githubInfo.stars && githubInfo.forks && (
             <div className="github-stats">
