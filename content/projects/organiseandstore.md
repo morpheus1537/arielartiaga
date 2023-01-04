@@ -6,6 +6,6 @@ external: 'https://organiseandstore.com.au/'
 cover: './images/organiseandstore.webp'
 tech:
   - BigCommerce
-company: ''
+company: 'MatterDesign'
 showInProjects: true
 ---

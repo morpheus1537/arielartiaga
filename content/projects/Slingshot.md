@@ -6,6 +6,7 @@ external: 'https://slingshotaustralia.com.au/'
 cover: './images/Slingshot.webp'
 tech:
   - Shopfiy
+company: 'iMateGroup'
 showInProjects: true
 ---
 

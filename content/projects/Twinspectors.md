@@ -6,6 +6,7 @@ external: 'https://twinspectors.com.au/'
 cover: './images/Twinspectors.webp'
 tech:
   - WordPress
+company: 'iMateGroup'
 showInProjects: true
 ---
 

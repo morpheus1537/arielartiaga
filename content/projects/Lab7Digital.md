@@ -6,7 +6,7 @@ external: 'https://www.lab7digital.com/'
 cover: './images/Lab7Digital.webp'
 tech:
   - WordPress
-company: 'Starry'
+company: 'iMateGroup'
 showInProjects: true
 ---
 

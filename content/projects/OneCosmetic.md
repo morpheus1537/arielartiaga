@@ -6,6 +6,6 @@ external: 'https://www.onecosmetic.com/'
 cover: './images/OneCosmetic.webp'
 tech:
   - WordPress & BigCommerce
-company: ''
+company: 'MatterDesign'
 showInProjects: true
 ---

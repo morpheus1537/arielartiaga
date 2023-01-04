@@ -6,7 +6,7 @@ external: 'https://gcaquapark.com.au/'
 cover: './images/GC-Aqua-Park.webp'
 tech:
   - WordPress
-company: ''
+company: 'iMateGroup'
 showInProjects: true
 ---
 

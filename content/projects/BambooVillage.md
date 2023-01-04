@@ -6,7 +6,7 @@ external: 'https://bamboovillage.com.au/'
 cover: './images/Bamboo-Village.webp'
 tech:
   - BigCommerce
-company: ''
+company: 'iMateGroup'
 showInProjects: true
 ---
 

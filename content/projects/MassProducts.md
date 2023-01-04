@@ -6,6 +6,7 @@ external: 'https://www.massproducts.com.au/'
 cover: './images/Mass-Products.webp'
 tech:
   - Shopify
+company: 'iMateGroup'
 showInProjects: true
 ---
 

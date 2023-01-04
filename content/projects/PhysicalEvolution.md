@@ -6,6 +6,6 @@ external: 'https://www.upstatement.com/'
 cover: './images/Physical-Evolution.webp'
 tech:
   - WordPress
-company: ''
+company: 'iMateGroup'
 showInProjects: true
 ---

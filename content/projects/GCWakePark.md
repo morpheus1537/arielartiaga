@@ -6,6 +6,7 @@ external: 'http://gcwakepark.com.au/'
 cover: './images/GC-WakePark.webp'
 tech:
   - WordPress
+company: 'iMateGroup'
 showInProjects: true
 ---
 

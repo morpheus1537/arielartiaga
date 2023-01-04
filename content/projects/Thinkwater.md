@@ -6,7 +6,7 @@ external: 'https://www.thinkwater.com.au/'
 cover: './images/Thinkwater.webp'
 tech:
   - WordPress
-company: 'Northeastern'
+company: 'iMateGroup'
 showInProjects: true
 ---
 

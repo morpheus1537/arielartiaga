@@ -6,6 +6,6 @@ external: 'https://www.zenspacedesks.com.au/'
 cover: './images/ZenspaceDesk.webp'
 tech:
   - BigCommerce
-company: ''
+company: 'iMateGroup'
 showInProjects: true
 ---

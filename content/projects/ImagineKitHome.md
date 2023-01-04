@@ -6,6 +6,7 @@ external: 'https://imaginekithomes.com.au/'
 cover: './images/Imagine-Kit-Home.webp'
 tech:
   - WordPress
+company: 'iMateGroup'
 showInProjects: true
 ---
 

@@ -5,7 +5,7 @@ external: 'https://outdoorconnection.com.au/'
 cover: './images/Outdoor-Connection.webp'
 tech:
   - Shopify
-company: ''
+company: 'iMateGroup'
 showInProjects: true
 ---
 

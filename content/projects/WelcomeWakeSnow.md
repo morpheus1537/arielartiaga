@@ -6,6 +6,7 @@ external: 'https://www.welcomewakensnow.com.au/'
 cover: './images/Welcome-Wake-Snow.webp'
 tech:
   - Shopify
+company: 'iMateGroup'
 showInProjects: true
 ---
 

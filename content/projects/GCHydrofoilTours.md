@@ -6,7 +6,7 @@ external: 'https://gcfoiltours.com.au/'
 cover: './images/GC-Hydrofoil-Tours.webp'
 tech:
   - WordPress
-company: ''
+company: 'iMateGroup'
 showInProjects: true
 ---
 
