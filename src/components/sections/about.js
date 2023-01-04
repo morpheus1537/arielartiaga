@@ -149,9 +149,9 @@ const About = () => {
             <p>
               Hello! My name is Ariel Artiaga. I’m a developer with a keen eye for good design and
               developing a website. I love to make complex things simple and easy to use. I have
-              solid experience from 4+ years in the field. I can handle both the front-end and
-              back-end development of a website. I also have a serious passion for UI effects,
-              animations, and creating intuitive, dynamic user experiences on websites.
+              solid 5 years experience in the field. I can handle both the front-end and back-end
+              development of a website. I also have a serious passion for UI effects, animations,
+              and creating intuitive, dynamic user experiences on websites.
             </p>
 
             <p>

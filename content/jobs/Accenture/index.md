@@ -7,6 +7,6 @@ url: 'https://www.accenture.com/'
 location: '&nbsp;'
 ---
 
-- Responsible for the development, maintenance, and deployment of website pages
-- Optimize apps/sites to improve performance and efficiency
+- Responsible for the development, maintenance, and deployment of website pages.
+- Optimize apps/sites to improve performance and efficiency.
 - Perform system and integration testing with sample and live data.
