@@ -10,4 +10,3 @@ company: 'MatterDesign'
 showInProjects: false
 ---
 
-Isentia is the leading media monitoring, intelligence and insights solution provider, helping top-performing communication teams make sense of the world’s conversations in real-time.
