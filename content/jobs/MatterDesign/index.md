@@ -1,8 +1,8 @@
 ---
 date: '2022-09-1'
-title: 'Full Stack Developer'
+title: 'Full Stack Developer / Consultant'
 company: 'MatterDesign'
-range: '2022 - Present'
+range: '2022 - 2023'
 url: 'https://matterdesign.com.au/'
 location: '&nbsp;'
 ---
