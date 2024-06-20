@@ -5,11 +5,6 @@ external: 'https://www.glamnetic.com/'
 cover: './images/glamnetic.jpg'
 tech:
   - Shopify
-  - Liquid
-  - Javascript
-  - Ruby
-  - HTML
-  - CSS
 company: 'Glamnetic'
 showInProjects: true
 ---
